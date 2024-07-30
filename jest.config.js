@@ -9,7 +9,11 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const config = {
   coverageProvider: 'v8',
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jsdom',
+  testMatch: [
+    '**/jest-cucumber-setup.ts',
+    '**/*.steps.ts'
+  ]
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 }
